@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9190b3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #FFF1DB;
+    border: 1px solid #D4BDAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cell.x {
+    color: #EF5A6F;
+}
+
+.cell.o {
+    color: #536493;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* Highlight the winning cells with a different background color */
+.winning-cell {
+    background-color: #5BD1D7; /* Yellowish color for winning cells */
+    animation: highlight 0.5s ease-in-out alternate infinite; /* Optional animation */
+}
+
+@keyframes highlight {
+    0% { background-color: #5BD1D7; }
+    100% { background-color: #348498; }
+}
